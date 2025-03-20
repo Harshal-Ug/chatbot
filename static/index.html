@@ -13,7 +13,7 @@
             height: 100vh;
             background-color: #f4f4f4;
         }
-        .container {
+        .container, .chat-container {
             background: white;
             padding: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -37,45 +37,13 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        button:hover {
-            background: #218838;
-        }
-        .toggle-btn {
-            background: none;
-            color: blue;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .chat-container {
-            display: none;
-            flex-direction: column;
-            height: 400px;
-            width: 350px;
-            background: white;
-            padding: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .chat-box {
-            flex-grow: 1;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            padding: 10px;
-            height: 300px;
-        }
-        .chat-input {
-            display: flex;
-        }
-        .chat-input input {
-            flex-grow: 1;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .chat-input button {
-            margin-left: 5px;
-        }
+        button:hover { background: #218838; }
+        .toggle-btn { background: none; color: blue; border: none; cursor: pointer; margin-top: 10px; }
+        .chat-container { display: none; flex-direction: column; width: 350px; padding: 10px; }
+        .chat-box { height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; }
+        .chat-input { display: flex; }
+        .chat-input input { flex-grow: 1; padding: 8px; border: 1px solid #ddd; border-radius: 5px; }
+        .chat-input button { margin-left: 5px; }
     </style>
 </head>
 <body>
@@ -103,11 +71,11 @@
         <input type="text" id="chat-input" placeholder="Type your message...">
         <button onclick="sendMessage()">Send</button>
     </div>
+    <button onclick="logout()">Logout</button>
 </div>
 
 <script>
     let isLogin = true;
-    let userId = localStorage.getItem("userId") || null;
 
     function toggleForm() {
         isLogin = !isLogin;
@@ -134,8 +102,7 @@
         document.getElementById("message").innerText = result.message;
 
         if (response.ok && isLogin) {
-            localStorage.setItem("userId", email); 
-            userId = email;
+            localStorage.setItem("token", result.access_token); 
             showChat();
         }
     });
@@ -153,7 +120,24 @@
         appendMessage("You", message);
         inputField.value = "";
 
-        const response = await fetch(`http://localhost:8000/chat?user_id=${userId}&query=${encodeURIComponent(message)}`);
+        const token = localStorage.getItem("token");
+        if (!token) {
+            alert("Session expired! Please login again.");
+            logout();
+            return;
+        }
+
+        const response = await fetch(`http://localhost:8000/chat?query=${encodeURIComponent(message)}`, {
+            method: "GET",
+            headers: { "Authorization": `Bearer ${token}` }
+        });
+
+        if (response.status === 401) {
+            alert("Session expired! Please login again.");
+            logout();
+            return;
+        }
+
         const result = await response.json();
         appendMessage("Bot", result.response);
     }
@@ -166,8 +150,14 @@
         chatBox.scrollTop = chatBox.scrollHeight;
     }
 
-    if (userId) {
-        showChat(); 
+    function logout() {
+        localStorage.removeItem("token");
+        location.reload();
+    }
+
+    // Auto-show chat if already logged in
+    if (localStorage.getItem("token")) {
+        showChat();
     }
 </script>
 
