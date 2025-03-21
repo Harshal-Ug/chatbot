@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "67dbaed1a5932cfb984d7882"
+  },
+  "email": "harshalupaganlawar8@gmail.com",
+  "password": "$2b$12$3LTkU92DzxUS7tFG4KK6UOjphkl4AVuSFJmS1GLg/yfBU5HsSMlVK"
+},
+{
+  "_id": {
+    "$oid": "67dbafdd69f250ed913d535b"
+  },
+  "email": "ruharshal805@edunetmail.com",
+  "password": "$2b$12$6BL7m/pqF.w1L0DNlpiRnOW8T.l8Ka2/qUNZE443DtQyt1MalRXoi"
+},
+{
+  "_id": {
+    "$oid": "67dcf9ad0efd291cfed4f2ec"
+  },
+  "email": "michael.brown@email.com",
+  "password": "$2b$12$PDysggJhWX0HGqyHSqmXqeKQXRIEKZQQlOgOCNMFzZkJTeJrrpk7m"
+}]

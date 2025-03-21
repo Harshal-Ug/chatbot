@@ -1,0 +1,307 @@
+[{
+  "_id": {
+    "$oid": "67dcf4c85b03fa1e8ec3008a"
+  },
+  "name": "Dr. Rajesh Sharma",
+  "specialization": "Cardiologist",
+  "experience": "15 years",
+  "education": "MBBS, MD (Cardiology)",
+  "languagesSpoken": [
+    "English",
+    "Hindi",
+    "Marathi"
+  ],
+  "consultationFee": 1200,
+  "acceptedInsurance": [
+    "Max Bupa",
+    "ICICI Lombard",
+    "HDFC Ergo"
+  ],
+  "affiliations": [
+    "Fortis Hospital",
+    "Apollo Clinic"
+  ],
+  "availability": {
+    "2025-03-20": [
+      "09:00 AM",
+      "09:30 AM",
+      "10:00 AM"
+    ],
+    "2025-03-21": [
+      "02:00 PM",
+      "02:30 PM",
+      "03:00 PM"
+    ]
+  },
+  "estimatedWaitingTime": "30 minutes",
+  "specialServices": [
+    "Online Consultation",
+    "Emergency Care"
+  ],
+  "ratings": {
+    "average": 4.7,
+    "reviews": 120
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf4c85b03fa1e8ec3008b"
+  },
+  "name": "Dr. Pooja Mehta",
+  "specialization": "Dermatologist",
+  "experience": "10 years",
+  "education": "MBBS, MD (Dermatology)",
+  "languagesSpoken": [
+    "English",
+    "Hindi"
+  ],
+  "consultationFee": 800,
+  "acceptedInsurance": [
+    "Bajaj Allianz",
+    "SBI Health",
+    "HDFC Ergo"
+  ],
+  "affiliations": [
+    "Max Healthcare",
+    "Kokilaben Hospital"
+  ],
+  "availability": {
+    "2025-03-20": [
+      "10:00 AM",
+      "10:30 AM",
+      "11:00 AM"
+    ],
+    "2025-03-21": [
+      "01:30 PM",
+      "02:00 PM",
+      "02:30 PM"
+    ]
+  },
+  "estimatedWaitingTime": "20 minutes",
+  "specialServices": [
+    "Online Consultation"
+  ],
+  "ratings": {
+    "average": 4.5,
+    "reviews": 95
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf4c85b03fa1e8ec3008c"
+  },
+  "name": "Dr. Neha Bansal",
+  "specialization": "Endocrinologist",
+  "experience": "11 years",
+  "education": "MBBS, DM (Endocrinology)",
+  "languagesSpoken": [
+    "English",
+    "Hindi"
+  ],
+  "consultationFee": 1300,
+  "acceptedInsurance": [
+    "Max Bupa",
+    "ICICI Lombard",
+    "Star Health"
+  ],
+  "affiliations": [
+    "Fortis Hospital",
+    "EndoCare Clinic"
+  ],
+  "availability": {
+    "2025-03-20": [
+      "08:30 AM",
+      "09:00 AM",
+      "09:30 AM"
+    ],
+    "2025-03-21": [
+      "03:00 PM",
+      "03:30 PM",
+      "04:00 PM"
+    ]
+  },
+  "estimatedWaitingTime": "20 minutes",
+  "specialServices": [
+    "Diabetes Management",
+    "Hormone Therapy"
+  ],
+  "ratings": {
+    "average": 4.6,
+    "reviews": 100
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf4c85b03fa1e8ec3008d"
+  },
+  "name": "Dr. Sanjay Kapoor",
+  "specialization": "Orthopedic Surgeon",
+  "experience": "18 years",
+  "education": "MBBS, MS (Orthopedics)",
+  "languagesSpoken": [
+    "English",
+    "Hindi",
+    "Punjabi"
+  ],
+  "consultationFee": 1500,
+  "acceptedInsurance": [
+    "HDFC Ergo",
+    "Tata AIG"
+  ],
+  "affiliations": [
+    "Bone & Joint Hospital",
+    "Apollo Hospital"
+  ],
+  "availability": {
+    "2025-03-20": [
+      "10:00 AM",
+      "10:30 AM",
+      "11:00 AM"
+    ],
+    "2025-03-21": [
+      "01:00 PM",
+      "01:30 PM",
+      "02:00 PM"
+    ]
+  },
+  "estimatedWaitingTime": "30 minutes",
+  "specialServices": [
+    "Joint Replacement",
+    "Sports Injury Treatment"
+  ],
+  "ratings": {
+    "average": 4.8,
+    "reviews": 135
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf4c85b03fa1e8ec3008e"
+  },
+  "name": "Dr. Meera Desai",
+  "specialization": "Psychiatrist",
+  "experience": "13 years",
+  "education": "MBBS, MD (Psychiatry)",
+  "languagesSpoken": [
+    "English",
+    "Hindi",
+    "Gujarati"
+  ],
+  "consultationFee": 1100,
+  "acceptedInsurance": [
+    "SBI Health",
+    "Bajaj Allianz"
+  ],
+  "affiliations": [
+    "MindCare Clinic",
+    "Kokilaben Hospital"
+  ],
+  "availability": {
+    "2025-03-20": [
+      "11:00 AM",
+      "11:30 AM",
+      "12:00 PM"
+    ],
+    "2025-03-21": [
+      "03:30 PM",
+      "04:00 PM",
+      "04:30 PM"
+    ]
+  },
+  "estimatedWaitingTime": "25 minutes",
+  "specialServices": [
+    "Depression & Anxiety Treatment",
+    "Cognitive Therapy"
+  ],
+  "ratings": {
+    "average": 4.5,
+    "reviews": 120
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf4c85b03fa1e8ec3008f"
+  },
+  "name": "Dr. Ankur Sharma",
+  "specialization": "Oncologist",
+  "experience": "17 years",
+  "education": "MBBS, DM (Oncology)",
+  "languagesSpoken": [
+    "English",
+    "Hindi"
+  ],
+  "consultationFee": 2000,
+  "acceptedInsurance": [
+    "ICICI Lombard",
+    "Star Health"
+  ],
+  "affiliations": [
+    "Cancer Care Institute",
+    "AIIMS"
+  ],
+  "availability": {
+    "2025-03-20": [
+      "09:30 AM",
+      "10:00 AM",
+      "10:30 AM"
+    ],
+    "2025-03-21": [
+      "02:00 PM",
+      "02:30 PM",
+      "03:00 PM"
+    ]
+  },
+  "estimatedWaitingTime": "35 minutes",
+  "specialServices": [
+    "Chemotherapy",
+    "Radiation Therapy"
+  ],
+  "ratings": {
+    "average": 4.7,
+    "reviews": 140
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf4c85b03fa1e8ec30090"
+  },
+  "name": "Dr. Priya Nair",
+  "specialization": "Ophthalmologist",
+  "experience": "9 years",
+  "education": "MBBS, MS (Ophthalmology)",
+  "languagesSpoken": [
+    "English",
+    "Hindi",
+    "Malayalam"
+  ],
+  "consultationFee": 900,
+  "acceptedInsurance": [
+    "Max Bupa",
+    "HDFC Ergo"
+  ],
+  "affiliations": [
+    "VisionCare Hospital",
+    "Apollo Eye Center"
+  ],
+  "availability": {
+    "2025-03-20": [
+      "08:00 AM",
+      "08:30 AM",
+      "09:00 AM"
+    ],
+    "2025-03-21": [
+      "12:00 PM",
+      "12:30 PM",
+      "01:00 PM"
+    ]
+  },
+  "estimatedWaitingTime": "15 minutes",
+  "specialServices": [
+    "LASIK Surgery",
+    "Cataract Treatment"
+  ],
+  "ratings": {
+    "average": 4.6,
+    "reviews": 110
+  }
+}]

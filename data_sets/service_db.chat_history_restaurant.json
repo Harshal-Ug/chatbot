@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "67dcf7de3231e22d8d1fb183"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "hii",
+  "response": "Hi there!  What can I help you with regarding the menu? 😉 \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:23:42.625Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf7e83231e22d8d1fb184"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "which starters are available",
+  "response": "Hi there!  😊 \n\nWe have a few delicious starters on the menu. You could try our Spring Rolls for a tasty appetizer or our Paneer Tikka for something more substantial.  \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:23:52.733Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf8093231e22d8d1fb185"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "any mild starters and spicy main course and a non dairy desert",
+  "response": "Okay, so you're looking for some milder appetizers to start with?  We have Paneer Tikka that is known for its delicious mild taste! Then for the main course, we offer Chicken Biryani which is a spicy and flavorful option! \n\nFor your non-dairy dessert, how about trying our Gulab Jamun? 😋 \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:24:25.800Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf81d3231e22d8d1fb186"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "great! order these",
+  "response": "Okay, here's what you ordered: \n\n* **Spicy:**  Start with Spring Rolls ( $250) \n* **Non-Dairy Dessert:** Gulab Jamun ($300)\n \nWhat else can I help you with? 😉  \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:24:45.783Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf9c40efd291cfed4f2ed"
+  },
+  "user_id": "michael.brown@email.com",
+  "message": "hii",
+  "response": "Hey there! 😊  What can I help you with from the menu? 🍽️ \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:31:48.850Z"
+  }
+}]

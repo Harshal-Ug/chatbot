@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "67dcf4f93398ae69c015c92a"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "hii",
+  "response": "Hello! 👋  How can I help you find the perfect doctor for your needs? 😊 \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:11:21.710Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf50c3398ae69c015c92b"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "which sprecialization doctors are available",
+  "response": "Hi there!  To find the best doctor for your needs, I can tell you which specialists are currently on our list: \n\n* **Cardiologist:** Dr. Rajesh Sharma (Fee ₹1200)\n* **Dermatologist:** Dr. Pooja Mehta (Fee ₹800)\n* **Endocrinologist:** Dr. Neha Bansal (Fee ₹1300)\n* **Orthopedic Surgeon:** Dr. Sanjay Kapoor (Fee ₹1500) \n* **Psychiatrist:** Dr. Meera Desai (Fee ₹1100)\n* **Oncologist:** Dr. Ankur Sharma (Fee ₹2000)\n* **Ophthalmologist:** Dr. Priya Nair (Fee ₹900)\n\nI hope this helps you! 🩺 😄  \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:11:40.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf5513398ae69c015c92c"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "Which doctors are available on 25/3/25 ",
+  "response": "Hi there!  To find out which doctors are available on March 25th, 2025, just let me know what specialty you're interested in or if you have any other questions about the doctors and their fees. 😊  \n\n\nLet me know how I can help you further! 😄  \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:12:49.142Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf5653398ae69c015c92d"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "Which doctors are available on 25/3/25",
+  "response": "Hi there!  To check which doctors are available on March 25th, 2025, I need a little more information from you! 😉 \n\nCould you please tell me:\n\n* **What city or area** are you looking for? (This helps me know the doctor's office locations) \n* **Do you have any preferences** for a specific gender for the doctor? \n\n\nI'll then be able to give you the best answer! 😄  \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:13:09.316Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf5753398ae69c015c92e"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "pune orthologist",
+  "response": "Hello!  I can help you find the right doctor for your needs. \n\nDr. Sanjay Kapoor is an Orthopedic Surgeon and might be able to help you with that.  Would you like to know more about him or check if he's available on 25/3/25? 😊 \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:13:25.939Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf5813398ae69c015c92f"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "yes",
+  "response": "Hi there!  😊  I can help you find the right doctor for your needs. \n\nHere are the doctors available on 25/3/25 with their specialties and fees:\n\n* **Dr. Rajesh Sharma:** Cardiologist (Fee: ₹1200)\n* **Dr. Sanjay Kapoor:** Orthopedic Surgeon (Fee: ₹1500) \n* **Dr. Priya Nair:** Ophthalmologist (Fee: ₹900) \n\n\nLet me know if you need help narrowing down your search!  🙌 \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:13:37.525Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf5913398ae69c015c930"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "yes narrow",
+  "response": "Okay, here are the doctors specializing in the following fields:\n\n* **Cardiologist:** Dr. Rajesh Sharma \n* **Dermatologist:** Dr. Pooja Mehta\n* **Endocrinologist:** Dr. Neha Bansal \n* **Orthopedic Surgeon:** Dr. Sanjay Kapoor\n* **Psychiatrist:** Dr. Meera Desai \n* **Oncologist:** Dr. Ankur Sharma\n* **Ophthalmologist:** Dr. Priya Nair\n\nLet me know if you'd like to narrow it down further! 😊  \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:13:53.485Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf5b23398ae69c015c931"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "\"Can I book an appointment with Dr Rajesh Sharma on 25/3/2025",
+  "response": "Yes, Dr. Rajesh Sharma is available on 25/3/2025 for appointments. Would you like to book one? 😊 \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:14:26.218Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf5b93398ae69c015c932"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "yes",
+  "response": "Dr. Rajesh Sharma is available for appointments on 25/3/2025!  Would you like to book an appointment with him? 😊 \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:14:33.043Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67dcf5c03398ae69c015c933"
+  },
+  "user_id": "harshalupaganlawar8@gmail.com",
+  "message": "yes",
+  "response": "Absolutely!  Dr. Rajesh Sharma is available for appointments on March 25th, 2025. He specializes in cardiology. Let me check the availability for you and let you know what time slots are open. 😊 \n\nWhat would you like to book? \n",
+  "timestamp": {
+    "$date": "2025-03-21T05:14:40.009Z"
+  }
+}]

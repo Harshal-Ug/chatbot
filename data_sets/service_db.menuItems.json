@@ -1,0 +1,140 @@
+[{
+  "_id": {
+    "$oid": "67dcf7b85b03fa1e8ec3009f"
+  },
+  "category": "Starters",
+  "items": [
+    {
+      "name": "Paneer Tikka",
+      "category": "Vegetarian",
+      "cuisineType": "Indian",
+      "price": 280,
+      "calories": 350,
+      "spicinessLevel": "Spicy",
+      "prepTime": "20 minutes",
+      "description": "Spiced and grilled paneer cubes marinated with yogurt and aromatic Indian spices.",
+      "ingredients": [
+        "Paneer",
+        "Yogurt",
+        "Spices",
+        "Lemon"
+      ],
+      "dietaryPreferences": [
+        "Vegetarian",
+        "Gluten-Free"
+      ]
+    },
+    {
+      "name": "Spring Rolls",
+      "category": "Vegetarian",
+      "cuisineType": "Chinese",
+      "price": 250,
+      "calories": 300,
+      "spicinessLevel": "Mild",
+      "prepTime": "15 minutes",
+      "description": "Crispy deep-fried rolls filled with fresh vegetables and soy sauce.",
+      "ingredients": [
+        "Flour",
+        "Cabbage",
+        "Carrot",
+        "Soy Sauce"
+      ],
+      "dietaryPreferences": [
+        "Vegetarian"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67dcf7b85b03fa1e8ec300a0"
+  },
+  "category": "Main Course",
+  "items": [
+    {
+      "name": "Chicken Biryani",
+      "category": "Non-Vegetarian",
+      "cuisineType": "Indian",
+      "price": 520,
+      "calories": 450,
+      "spicinessLevel": "Medium",
+      "prepTime": "40 minutes",
+      "description": "Aromatic basmati rice cooked with spiced marinated chicken and saffron.",
+      "ingredients": [
+        "Chicken",
+        "Rice",
+        "Spices",
+        "Saffron"
+      ],
+      "dietaryPreferences": [
+        "Non-Vegetarian",
+        "Gluten-Free"
+      ]
+    },
+    {
+      "name": "Veg Manchurian",
+      "category": "Vegetarian",
+      "cuisineType": "Chinese",
+      "price": 300,
+      "calories": 320,
+      "spicinessLevel": "Medium",
+      "prepTime": "25 minutes",
+      "description": "Deep-fried vegetable dumplings tossed in a tangy soy-based sauce.",
+      "ingredients": [
+        "Cabbage",
+        "Carrot",
+        "Garlic",
+        "Soy Sauce"
+      ],
+      "dietaryPreferences": [
+        "Vegetarian"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67dcf7b85b03fa1e8ec300a1"
+  },
+  "category": "Desserts",
+  "items": [
+    {
+      "name": "Gulab Jamun",
+      "category": "Vegetarian",
+      "cuisineType": "Indian",
+      "price": 300,
+      "calories": 250,
+      "spicinessLevel": "None",
+      "prepTime": "15 minutes",
+      "description": "Soft, deep-fried milk dumplings soaked in sugar syrup infused with cardamom.",
+      "ingredients": [
+        "Milk Solids",
+        "Sugar",
+        "Cardamom"
+      ],
+      "dietaryPreferences": [
+        "Vegetarian",
+        "Gluten-Free"
+      ]
+    },
+    {
+      "name": "Chocolate Brownie",
+      "category": "Vegetarian",
+      "cuisineType": "Continental",
+      "price": 450,
+      "calories": 400,
+      "spicinessLevel": "None",
+      "prepTime": "30 minutes",
+      "description": "Rich, fudgy chocolate brownie served warm with a crisp crust.",
+      "ingredients": [
+        "Flour",
+        "Chocolate",
+        "Butter",
+        "Sugar"
+      ],
+      "dietaryPreferences": [
+        "Vegetarian"
+      ]
+    }
+  ]
+}]
