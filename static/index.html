@@ -3,163 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Chatbot</title>
+    <title>AI Inquiry Chatbot</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container, .chat-container {
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            width: 300px;
             text-align: center;
+            margin: 20px;
         }
-        input {
-            width: 90%;
+        #container {
+            width: 400px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
             padding: 10px;
-            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        #messages {
+            height: 300px;
+            overflow-y: auto;
             border: 1px solid #ddd;
+            padding: 10px;
+            background: #fff;
+            text-align: left;
+        }
+        .message {
+            padding: 5px;
+            margin: 5px 0;
             border-radius: 5px;
         }
-        button {
-            background: #28a745;
-            color: white;
-            border: none;
+        .user {
+            background-color: #d1e7dd;
+            text-align: right;
+        }
+        .bot {
+            background-color: #f8d7da;
+            text-align: left;
+        }
+        input, select, button {
+            margin-top: 10px;
             padding: 10px;
             width: 100%;
-            cursor: pointer;
             border-radius: 5px;
+            border: 1px solid #ccc;
         }
-        button:hover { background: #218838; }
-        .toggle-btn { background: none; color: blue; border: none; cursor: pointer; margin-top: 10px; }
-        .chat-container { display: none; flex-direction: column; width: 350px; padding: 10px; }
-        .chat-box { height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; }
-        .chat-input { display: flex; }
-        .chat-input input { flex-grow: 1; padding: 8px; border: 1px solid #ddd; border-radius: 5px; }
-        .chat-input button { margin-left: 5px; }
     </style>
 </head>
 <body>
 
-<!-- Login & Signup Container -->
-<div class="container" id="auth-container">
-    <h2 id="form-title">Login</h2>
-    
-    <form id="auth-form">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Submit</button>
-    </form>
-    
-    <button class="toggle-btn" onclick="toggleForm()">Don't have an account? Sign up</button>
-    
-    <p id="message"></p>
-</div>
+    <h2>AI Inquiry Chatbot</h2>
 
-<!-- Chatbot Interface -->
-<div class="chat-container" id="chat-container">
-    <h2>Chatbot</h2>
-    <div class="chat-box" id="chat-box"></div>
-    <div class="chat-input">
-        <input type="text" id="chat-input" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
+    <div id="service-selection">
+        <h3>Select a Service</h3>
+        <button onclick="selectService('restaurant')">Restaurant Inquiry</button>
+        <button onclick="selectService('appointment')">Doctor Inquiry</button>
     </div>
-    <button onclick="logout()">Logout</button>
-</div>
 
-<script>
-    let isLogin = true;
+    <div id="auth-section" style="display:none;">
+        <h3>Login / Signup</h3>
+        <input type="email" id="email" placeholder="Enter email">
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="authenticate('signup')">Signup</button>
+        <button onclick="authenticate('login')">Login</button>
+        <p id="auth-message"></p>
+    </div>
 
-    function toggleForm() {
-        isLogin = !isLogin;
-        document.getElementById("form-title").innerText = isLogin ? "Login" : "Sign Up";
-        document.querySelector(".toggle-btn").innerText = isLogin 
-            ? "Don't have an account? Sign up" 
-            : "Already have an account? Login";
-    }
+    <div id="chat-section" style="display:none;">
+        <h3>Ask Your Questions</h3>
+        <div id="container">
+            <div id="messages"></div>
+            <input type="text" id="user-query" placeholder="Type your question...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
 
-    document.getElementById("auth-form").addEventListener("submit", async (e) => {
-        e.preventDefault();
-        
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const url = isLogin ? "http://localhost:8000/login" : "http://localhost:8000/signup";
-        
-        const response = await fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, password })
-        });
+    <script>
+        let token = "";
+        let selectedService = "";
 
-        const result = await response.json();
-        document.getElementById("message").innerText = result.message;
-
-        if (response.ok && isLogin) {
-            localStorage.setItem("token", result.access_token); 
-            showChat();
-        }
-    });
-
-    function showChat() {
-        document.getElementById("auth-container").style.display = "none";
-        document.getElementById("chat-container").style.display = "flex";
-    }
-
-    async function sendMessage() {
-        const inputField = document.getElementById("chat-input");
-        const message = inputField.value.trim();
-        if (!message) return;
-
-        appendMessage("You", message);
-        inputField.value = "";
-
-        const token = localStorage.getItem("token");
-        if (!token) {
-            alert("Session expired! Please login again.");
-            logout();
-            return;
+        function selectService(service) {
+            selectedService = service;
+            document.getElementById("service-selection").style.display = "none";
+            document.getElementById("auth-section").style.display = "block";
         }
 
-        const response = await fetch(`http://localhost:8000/chat?query=${encodeURIComponent(message)}`, {
-            method: "GET",
-            headers: { "Authorization": `Bearer ${token}` }
-        });
+        async function authenticate(type) {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const endpoint = type === "signup" ? "/signup" : "/login";
 
-        if (response.status === 401) {
-            alert("Session expired! Please login again.");
-            logout();
-            return;
+            const response = await fetch("http://127.0.0.1:8000" + endpoint, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                token = data.access_token || "";
+                localStorage.setItem("token", token);
+                document.getElementById("auth-message").innerText = type === "signup"
+                    ? "Signup successful! Please login."
+                    : "Login successful!";
+                document.getElementById("auth-section").style.display = "none";
+                document.getElementById("chat-section").style.display = "block";
+            } else {
+                document.getElementById("auth-message").innerText = data.detail;
+            }
         }
 
-        const result = await response.json();
-        appendMessage("Bot", result.response);
-    }
+        async function sendMessage() {
+            const query = document.getElementById("user-query").value;
+            if (!query.trim()) return;
 
-    function appendMessage(sender, message) {
-        const chatBox = document.getElementById("chat-box");
-        const msgDiv = document.createElement("div");
-        msgDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
-        chatBox.appendChild(msgDiv);
-        chatBox.scrollTop = chatBox.scrollHeight;
-    }
+            displayMessage(query, "user");
 
-    function logout() {
-        localStorage.removeItem("token");
-        location.reload();
-    }
+            const response = await fetch(`http://127.0.0.1:8000/chat?query=${query}&mode=${selectedService}`, {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${localStorage.getItem("token")}`
+                }
+            });
 
-    // Auto-show chat if already logged in
-    if (localStorage.getItem("token")) {
-        showChat();
-    }
-</script>
+            const data = await response.json();
+            displayMessage(data.response, "bot");
+            document.getElementById("user-query").value = "";
+        }
+
+        function displayMessage(text, sender) {
+            const messages = document.getElementById("messages");
+            const msgDiv = document.createElement("div");
+            msgDiv.className = `message ${sender}`;
+            msgDiv.innerText = text;
+            messages.appendChild(msgDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+    </script>
 
 </body>
 </html>
